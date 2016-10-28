@@ -1,0 +1,25 @@
+exports[`ReactZSort should be stable 1`] = `
+<g>
+  <circle
+    x={10} />
+  <circle
+    x={30} />
+  <circle
+    x={20} />
+</g>
+`;
+
+exports[`ReactZSort should render at all 1`] = `<g />`;
+
+exports[`ReactZSort should sort 1`] = `
+<g>
+  <circle
+    x={10} />
+  <circle
+    x={20} />
+  <circle
+    x={30} />
+  <circle
+    x={40} />
+</g>
+`;
