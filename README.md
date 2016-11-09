@@ -16,13 +16,13 @@ import ZOrder from 'react-z-order';
 </ZOrder>
 ```
 
-Produces `<g>` with ordered children:
+Produces `<g>` with ordered children and removes `z` property:
 
 ```jsx
 <g>
-  <circle x={10} z={10} />
-  <circle x={20} z={20} />
-  <circle x={30} z={30} />
+  <circle x={10} />
+  <circle x={20} />
+  <circle x={30} />
 </g>
 ```
 
