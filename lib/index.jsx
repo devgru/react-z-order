@@ -1,42 +1,36 @@
 // Module dependencies and export
-
 import React, {Children} from 'react';
-
-export default ZSort;
-
-// Internals
-
 const {count, toArray} = Children;
+export default ZOrder;
 
-function isNumber(z) {
-  return Number(z) === z;
+// Component
+function ZOrder({children}) {
+  const hasChildren = children && count(children) > 0;
+  const sortedChildren = hasChildren ? sort(children) : null;
+
+  return (<g>{sortedChildren}</g>);
 }
 
-function sortByZ(a, b) {
+// Internals
+function sort(children) {
+  return toArray(children).sort(sortByZProp).map(removeZProp);
+}
+
+function sortByZProp(a, b) {
   return a.props.z - b.props.z;
 }
 
-function purgeZ(child) {
-  const {z, ...props} = child.props;
+function removeZProp(child) {
+  const {z, ...props} = child.props; // separate z from props
 
   if (!isNumber(z)) {
-    throw new Error('Every child in ZSort container ' +
-      'must have `z` property which must be valid number.');
+    throw new Error('Every child in ZOrder container ' +
+      'must have `z` property which must be valid Number.');
   }
 
-  return {
-    ...child,
-    props
-  };
+  return {...child, props}; // rebuild child without props.z
 }
 
-function sortChildren(children) {
-  return toArray(children).sort(sortByZ).map(purgeZ);
-}
-
-function ZSort({children}) {
-  const hasChildren = children && count(children) > 0;
-  const sortedChildren = hasChildren ? sortChildren(children) : null;
-
-  return (<g>{sortedChildren}</g>);
+function isNumber(z) {
+  return Number(z) === z; // is there any
 }

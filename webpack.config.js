@@ -7,9 +7,9 @@ module.exports = {
 
   output: {
     path: path.join(__dirname),
-    filename: 'react-z-sort.js',
+    filename: 'react-z-order.js',
     libraryTarget: 'umd',
-    library: 'ReactZSort'
+    library: 'ReactZOrder'
   },
 
   externals: {

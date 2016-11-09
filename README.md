@@ -1,12 +1,29 @@
-# React Z Sort
+# React Z-Order
 
-Distirbuted as UMD module.
+React component that orders its children by `z` property.
 
-Here is a sample integration:
+Distributed as UMD module.
 
-```js
+Usage:
 
-});
+```jsx
+import ZOrder from 'react-z-order';
+
+<ZOrder>
+  <circle x={10} z={10} />
+  <circle x={30} z={30} />
+  <circle x={20} z={20} />
+</ZOrder>
+```
+
+Produces `<g>` with ordered children:
+
+```jsx
+<g>
+  <circle x={10} z={10} />
+  <circle x={20} z={20} />
+  <circle x={30} z={30} />
+</g>
 ```
 
 ## Development

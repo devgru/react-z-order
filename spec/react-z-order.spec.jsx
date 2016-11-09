@@ -1,34 +1,34 @@
 import React from 'react';
-import ZSort from '../lib';
+import ZOrder from '../lib';
 
 import renderer from 'react-test-renderer';
 
-describe('ReactZSort', () => {
+describe('ReactZOrder', () => {
   it('should render at all', function() {
     const component = renderer.create(
-      <ZSort />
+      <ZOrder />
     );
     expect(component.toJSON()).toMatchSnapshot();
   });
 
   it('should sort', () => {
     const component = renderer.create(
-      <ZSort>
+      <ZOrder>
         {
           [10, 20, 40, 30].map(i => <circle x={i} z={i} key={i} />)
         }
-      </ZSort>
+      </ZOrder>
     );
     expect(component.toJSON()).toMatchSnapshot();
   });
 
   it('should be stable', () => {
     const component = renderer.create(
-      <ZSort>
+      <ZOrder>
         <circle x={10} z={10} />
         <circle x={30} z={10} />
         <circle x={20} z={10} />
-      </ZSort>
+      </ZOrder>
     );
     expect(component.toJSON()).toMatchSnapshot();
   });
@@ -36,10 +36,10 @@ describe('ReactZSort', () => {
   it('should throw when no Z specified', () => {
     expect(() => {
       renderer.create(
-        <ZSort>
+        <ZOrder>
           <circle x={40} />
           <circle x={10} z={10} />
-        </ZSort>
+        </ZOrder>
       );
     }).toThrowError(Error);
   });

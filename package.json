@@ -1,16 +1,17 @@
 {
-  "name": "react-z-sort",
+  "name": "react-z-order",
   "version": "0.1.0",
-  "description": "react z sort",
+  "description": "React component that orders its children by z property.",
   "scripts": {
     "test": "react-scripts test --env=jsdom",
     "lint": "eslint lib/*.jsx spec/*.jsx",
-    "build": "webpack -p --config webpack.build.config.js"
+    "build": "webpack -p --config webpack.build.config.js",
+    "prepublish": "npm run lint && npm run build"
   },
   "files": [
-    "react-z-sort.js"
+    "react-z-order.js"
   ],
-  "main": "react-z-sort.js",
+  "main": "react-z-order.js",
   "author": "",
   "license": "BSD",
   "keywords": [
