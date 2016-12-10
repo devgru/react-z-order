@@ -1,7 +1,7 @@
 {
   "name": "react-z-order",
   "version": "0.1.0",
-  "description": "React component that orders its children by z property.",
+  "description": "React component that orders its children by z property",
   "scripts": {
     "test": "react-scripts test --env=jsdom",
     "lint": "eslint lib/*.jsx spec/*.jsx",
