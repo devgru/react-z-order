@@ -1,8 +1,16 @@
 # React Z-Order
 
-React component that orders its children by `z` property.
+> React component that orders its children by `z` property.
 
 Distributed as UMD module.
+
+## Installing
+
+```sh
+$ yarn add react-z-order
+# or
+$ npm install --save react-z-order
+```
 
 Usage:
 
@@ -28,5 +36,9 @@ Produces `<g>` with ordered children and removes `z` property:
 
 ## Development
 
-* Run tests: `npm run test`;
-* Build `npm run build`;
+* Run tests: `yarn test`;
+* Build `yarn build`;
+
+## License
+
+MIT © [Dmitriy Semyushkin](https://devg.ru)

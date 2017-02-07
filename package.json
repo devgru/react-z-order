@@ -1,6 +1,6 @@
 {
   "name": "react-z-order",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "React component that orders its children by z property",
   "scripts": {
     "test": "react-scripts test --env=jsdom",
