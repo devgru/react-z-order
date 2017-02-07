@@ -1,31 +1,33 @@
-/* jshint node: true */
-var path = require('path');
+const path = require('path');
+
+const fs = require('fs');
+const node_modules = fs.readdirSync('node_modules');
+
+const externals = {};
+node_modules.forEach(module => externals[module] = module);
+externals.react = 'React';
 
 module.exports = {
   context: path.join(__dirname),
-  entry: './lib/index.jsx',
+  entry: './lib/index.js',
 
   output: {
     path: path.join(__dirname),
-    filename: 'react-z-order.js',
+    filename: 'dist.js',
     libraryTarget: 'umd',
     library: 'ReactZOrder'
   },
 
-  externals: {
-    'react': 'var React',
-    'react/addons': 'var React'
-  },
+  externals,
 
   module: {
     loaders: [
       {
-        test: /(\.js)|(\.jsx)$/,
+        test: /(\.js)$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
-          optional: ['runtime'],
-          stage: 0
+          presets: ['es2015', 'stage-3', 'react']
         }
       }
     ]

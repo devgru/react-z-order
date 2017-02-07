@@ -30,7 +30,3 @@ Produces `<g>` with ordered children and removes `z` property:
 
 * Run tests: `npm run test`;
 * Build `npm run build`;
-
-## License
-
-MIT © [Dmitriy Semyushkin](https://devg.ru)

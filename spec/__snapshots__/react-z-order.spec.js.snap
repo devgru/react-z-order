@@ -1,4 +1,4 @@
-exports[`ReactZOrder should be stable 1`] = `
+exports[`react-z-order should be stable 1`] = `
 <g>
   <circle
     x={10} />
@@ -9,9 +9,9 @@ exports[`ReactZOrder should be stable 1`] = `
 </g>
 `;
 
-exports[`ReactZOrder should render at all 1`] = `<g />`;
+exports[`react-z-order should render at all 1`] = `<g />`;
 
-exports[`ReactZOrder should sort 1`] = `
+exports[`react-z-order should sort 1`] = `
 <g>
   <circle
     x={10} />

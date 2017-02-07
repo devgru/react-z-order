@@ -3,7 +3,7 @@ import ZOrder from '../lib';
 
 import renderer from 'react-test-renderer';
 
-describe('ReactZOrder', () => {
+describe('react-z-order', () => {
   it('should render at all', function() {
     const component = renderer.create(
       <ZOrder />
